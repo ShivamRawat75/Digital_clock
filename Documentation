@@ -1,0 +1,59 @@
+Digital Clock Documentation
+--------------------------
+
+This Python script implements a simple digital clock using the Tkinter library.
+
+Usage
+-----
+1. Make sure you have Python and the Tkinter library installed.
+2. Run the script, and a GUI window will open displaying the current time in digital clock format.
+
+Code Overview
+-------------
+1. Import necessary libraries:
+   - `tkinter`: Used for creating graphical user interfaces.
+   - `time`: Used for retrieving and formatting the current time.
+
+2. Create the main window:
+   - Create a Tkinter window using `ui.Tk()`.
+
+3. Define the `update_clock` function:
+   - This function is responsible for updating the digital clock display every second.
+   - Retrieve the current time using the `time` module's `strftime` function to format hours, minutes, seconds, and AM/PM.
+   - Construct a formatted time string in the format "HH:MM:SS AM/PM".
+   - Update the `digital_clock_label` text with the newly formatted time.
+   - Schedule the `update_clock` function to run again after 1000 milliseconds (1 second) using the `after` method.
+
+4. Create the digital clock label:
+   - Create a Tkinter Label widget (`digital_clock_label`) to display the digital clock time.
+   - Initialize the label with a default text of "00:00:00".
+   - Use the "Helvetica 72 bold" font for better visibility.
+   - Pack the label into the main window.
+
+5. Start the clock update loop:
+   - Call the `update_clock` function to initiate the clock update loop.
+
+6. Run the Tkinter main event loop:
+   - Call `window.mainloop()` to start the main event loop, which handles GUI events and updates.
+
+Components
+----------
+- `window`: The main Tkinter window where the clock GUI will be displayed.
+- `digital_clock_label`: A Tkinter Label widget that displays the digital clock time.
+- `update_clock()`: A function that updates the digital clock time and schedules itself to run every second.
+
+Functionality
+-------------
+The script creates a digital clock GUI that continuously updates to display the current time in the format "HH:MM:SS AM/PM". The clock updates every second, ensuring an accurate display of the current time.
+
+License
+-------
+This script is provided without any warranty. You are free to use and modify it for personal or educational purposes.
+
+Author
+------
+[Shivam rawat]
+
+Date
+----
+[22-08-2023]
